@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;
+    background-color: #93A5C4;
+  }
+  
+  header {
+    background-color: #17234E;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .header-title {
+    font-size: 24px;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .nav-buttons a.active {
+    background-color: #0056b3;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  .nav-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #323951;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-buttons a:hover {
+    background-color: #3F4760;
+  }
+  
+  .gallery {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .gallery-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+  
+  .artworks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .artwork-container {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #ffffff;              
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #ffffff;           
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .artwork-container:hover {
+    transform: scale(1.05);
+  }
+  
+  .artwork-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .artwork-container:hover img {
+    transform: scale(1.05);
+  }
+  
+  .caption {
+    margin-top: 8px;
+    font-size: 0.95em;
+    color: #333;
+  }
+  
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s ease;
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.85);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }

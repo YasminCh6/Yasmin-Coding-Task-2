@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+
+</head>
+<body>
+
+  <header>
+    <div class="nav-buttons">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html" class="active">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+  
+
+  <section class="gallery">
+    <div class="gallery-title">My Portfolio</div>
+    <div class="artworks">
+      <div class="artwork-container">
+        <img src="Images/Caitlyn fanart Yasmin.jpg" alt="Fanart of Caitlyn from Arcane" onclick="openLightbox(this.src)">
+        <p class="caption">Fanart of Caitlyn from Arcane</p>
+      </div>
+      <div class="artwork-container">
+        <img src="Images/Caitlyn study fanart.jpg" alt="Caitlyn Study Fanart" onclick="openLightbox(this.src)">
+        <p class="caption">Study of Caitlyn from Arcane</p>
+      </div>
+      <div class="artwork-container">
+        <img src="Images/Caitvi fanart yasmin.jpg" alt="Caitvi Fanart" onclick="openLightbox(this.src)">
+        <p class="caption">CaitVi Fanart </p>
+      </div>
+      <div class="artwork-container">
+        <img src="Images/collaboration.png" alt="Collaboration with sister" onclick="openLightbox(this.src)">
+        <p class="caption">Collab with my sister </p>
+      </div>
+      <div class="artwork-container">
+        <img src="Images/Vampires and fairies fighting yasmin.jpg" alt="School assignment artwork" onclick="openLightbox(this.src)">
+        <p class="caption">Vampires vs Fairies school project</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Enlarged artwork">
+  </div> 
+  
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+  
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+</body>
+</div>
+</html>
